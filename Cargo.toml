@@ -1,0 +1,26 @@
+[package]
+name = "serenity_bot"
+version = "0.1.0"
+authors = ["George Vassilev <george.vassilev91@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15"
+tracing = "0.1.23"
+tracing-subscriber = "0.2"
+regex = "1"
+lazy_static = "1.4.0"
+
+[dependencies.sqlx]
+version = "0.5.11"
+features = ["runtime-tokio-rustls", "sqlite", "offline"]
+
+[dependencies.tokio]
+version = "1.0"
+features = ["macros", "signal", "rt-multi-thread"]
+
+[dependencies.serenity]
+features = ["cache", "framework", "standard_framework", "rustls_backend"]
+version = "0.10"
