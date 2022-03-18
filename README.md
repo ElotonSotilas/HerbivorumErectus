@@ -8,6 +8,10 @@ The bot is written using the Serenity library.
 
 ### Frameworks Used
 ```toml
+[dependencies.serenity]
+features = ["cache", "framework", "standard_framework", "rustls_backend"]
+version = "0.10"
+
 [dependencies.sqlx]
 version = "0.5.11"
 features = ["runtime-tokio-rustls", "sqlite", "offline"]
